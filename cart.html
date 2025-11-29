@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - FreshEat</title>
+    <meta name="description" content="Review your fresh product selection. Secure checkout and fast delivery guaranteed.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link active" aria-current="page">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Cart Hero Section -->
+        <section class="cart-hero" aria-labelledby="cart-hero-title">
+            <div class="container">
+                <div class="cart-hero-content" data-aos="fade-up">
+                    <h1 id="cart-hero-title" class="hero-title">
+                        Your Shopping Cart
+                    </h1>
+                    <p class="hero-description">
+                        Review your fresh selections and proceed to secure checkout
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Content -->
+        <section class="cart-content" aria-label="Shopping cart items and summary">
+            <div class="container">
+                <div class="cart-layout">
+                    <!-- Cart Items -->
+                    <div class="cart-items-section" data-aos="fade-right">
+                        <div class="section-header">
+                            <h2 class="section-title">Your Fresh Selections</h2>
+                            <button id="clear-cart-btn" class="clear-cart-btn" aria-label="Clear all items from cart">
+                                <span class="btn-icon">🗑️</span>
+                                Clear Cart
+                            </button>
+                        </div>
+
+                        <div id="cart-root" class="cart-items-container">
+                            <!-- Cart items will be loaded here by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="cart-summary-section" data-aos="fade-left">
+                        <div class="cart-summary-card">
+                            <h3 class="summary-title">Order Summary</h3>
+                            
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span class="summary-label">Subtotal</span>
+                                    <span class="summary-value" id="cart-subtotal">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Shipping</span>
+                                    <span class="summary-value" id="cart-shipping">$2.99</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="summary-label">Tax</span>
+                                    <span class="summary-value" id="cart-tax">$0.00</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-row total">
+                                    <span class="summary-label">Total</span>
+                                    <span class="summary-value" id="cart-total">$0.00</span>
+                                </div>
+                            </div>
+
+                            <div class="delivery-info">
+                                <div class="delivery-item">
+                                    <span class="delivery-icon">🚚</span>
+                                    <span class="delivery-text">Free delivery on orders over $50</span>
+                                </div>
+                                <div class="delivery-item">
+                                    <span class="delivery-icon">⏰</span>
+                                    <span class="delivery-text">Next-day delivery available</span>
+                                </div>
+                            </div>
+
+                            <button id="checkout-btn" class="checkout-btn primary" aria-label="Proceed to secure checkout">
+                                <span class="btn-icon">🔒</span>
+                                Proceed to Secure Checkout
+                            </button>
+
+                            <div class="security-badge">
+                                <span class="security-icon">🛡️</span>
+                                <span class="security-text">100% Secure Checkout · SSL Encrypted</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust Indicators -->
+                        <div class="trust-indicators">
+                            <div class="trust-item">
+                                <span class="trust-icon">💝</span>
+                                <span class="trust-text">30-Day Freshness Guarantee</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">🌱</span>
+                                <span class="trust-text">Supporting Local Farms</span>
+                            </div>
+                            <div class="trust-item">
+                                <span class="trust-icon">📞</span>
+                                <span class="trust-text">Dedicated Customer Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products -->
+        <section class="recommended-products" aria-labelledby="recommended-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="recommended-title" class="section-title" data-aos="fade-up">
+                        Complete Your Fresh Order
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Add these popular items to make your meal perfect
+                    </p>
+                </div>
+
+                <div id="recommended-grid" class="products-grid">
+                    <!-- Recommended products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section class="cart-support" aria-labelledby="support-title">
+            <div class="container">
+                <div class="support-grid">
+                    <div class="support-card" data-aos="fade-up">
+                        <span class="support-icon">📞</span>
+                        <h3 id="support-title">Need Help?</h3>
+                        <p>Our friendly team is here to assist you with your order</p>
+                        <a href="contact.html" class="support-link">Contact Support</a>
+                    </div>
+
+                    <div class="support-card" data-aos="fade-up" data-aos-delay="200">
+                        <span class="support-icon">❓</span>
+                        <h3>Questions?</h3>
+                        <p>Find answers to common questions in our FAQ section</p>
+                        <a href="faq.html" class="support-link">Visit FAQ</a>
+                    </div>
+
+                    <div class="support-card" data-aos="fade-up" data-aos-delay="400">
+                        <span class="support-icon">💝</span>
+                        <h3>Fresh Guarantee</h3>
+                        <p>Not satisfied? We offer a 30-day freshness guarantee</p>
+                        <a href="guarantee.html" class="support-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

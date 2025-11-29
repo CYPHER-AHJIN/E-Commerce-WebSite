@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - FreshEat</title>
+    <meta name="description" content="Find answers to common questions about FreshEat products, delivery, returns, and more.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- FAQ Hero Section -->
+        <section class="faq-hero" aria-labelledby="faq-hero-title">
+            <div class="container">
+                <div class="faq-hero-content" data-aos="fade-up">
+                    <h1 id="faq-hero-title" class="hero-title">
+                        Frequently Asked Questions
+                    </h1>
+                    <p class="hero-description">
+                        Quick answers to common questions about our products and services
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="faq-content" aria-label="Frequently asked questions">
+            <div class="container">
+                <div class="faq-categories">
+                    <div class="category-nav" data-aos="fade-up">
+                        <button class="category-btn active" data-category="all">All Questions</button>
+                        <button class="category-btn" data-category="products">Products</button>
+                        <button class="category-btn" data-category="delivery">Delivery</button>
+                        <button class="category-btn" data-category="returns">Returns</button>
+                        <button class="category-btn" data-category="account">Account</button>
+                    </div>
+
+                    <div class="faq-accordion">
+                        <!-- Products Category -->
+                        <div class="faq-category" data-category="products">
+                            <h2 class="category-title" data-aos="fade-up">Products</h2>
+                            
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">Are all your products organic?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes! Every product in our selection is 100% organic certified. We work exclusively with farms that practice sustainable, chemical-free agriculture and maintain rigorous organic certification standards.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">How do you ensure product freshness?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We deliver within 24 hours of harvest. Our products are picked at peak ripeness and transported in temperature-controlled vehicles to maintain optimal freshness from farm to your table.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">Where do you source your products?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We partner with 50+ local farms within our region. This allows us to support local communities while ensuring the shortest possible time between harvest and delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delivery Category -->
+                        <div class="faq-category" data-category="delivery">
+                            <h2 class="category-title" data-aos="fade-up">Delivery</h2>
+                            
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">What are your delivery areas and hours?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We deliver daily from 8 AM to 8 PM across most urban areas. Next-day delivery is available for orders placed before 6 PM. You can check specific delivery availability during checkout.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">Is same-day delivery available?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes! We offer same-day delivery for orders placed before 12 PM. Availability may vary based on your location and current delivery capacity.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">What if I'm not home during delivery?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Our drivers will attempt to contact you. If unavailable, we'll leave your order in a safe, shaded place and send you a photo confirmation. For perishable items, we recommend scheduling delivery when you're home.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Returns Category -->
+                        <div class="faq-category" data-category="returns">
+                            <h2 class="category-title" data-aos="fade-up">Returns & Refunds</h2>
+                            
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">What is your freshness guarantee?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>We offer a 30-day freshness guarantee. If you're not satisfied with the quality or freshness of any product, contact us within 30 days for a full refund or replacement.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">How do I return a product?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Contact our support team within 30 days of delivery. We'll arrange pickup of the unsatisfactory items and process your refund or replacement within 2-3 business days.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">What items cannot be returned?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Due to health and safety regulations, we cannot accept returns of opened or partially consumed food items. However, we'll gladly address any quality concerns you may have.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Category -->
+                        <div class="faq-category" data-category="account">
+                            <h2 class="category-title" data-aos="fade-up">Account & Orders</h2>
+                            
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">How do I create an account?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Click the "Sign In" button in the top right corner, then select "Create Account." You'll need to provide your email address and create a password. Account creation is free and takes less than a minute.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">Can I modify my order after placing it?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>You can modify your order within 1 hour of placement by contacting our support team. After 1 hour, orders enter our fulfillment process and cannot be changed.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" data-aos="fade-up">
+                                <button class="faq-question" aria-expanded="false">
+                                    <span class="question-text">Do you offer subscription plans?</span>
+                                    <span class="toggle-icon">+</span>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes! We offer weekly and monthly subscription boxes with curated selections of seasonal produce. Subscribers enjoy 10% off regular prices and priority delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Still Have Questions -->
+                <div class="faq-support" data-aos="fade-up">
+                    <div class="support-card">
+                        <span class="support-icon">❓</span>
+                        <h3>Still Have Questions?</h3>
+                        <p>Can't find the answer you're looking for? Our friendly support team is here to help.</p>
+                        <div class="support-actions">
+                            <a href="contact.html" class="cta-button primary">
+                                <span class="button-icon">📞</span>
+                                Contact Support
+                            </a>
+                            <a href="tel:+201552174878" class="cta-button secondary">
+                                <span class="button-icon">📱</span>
+                                Call Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // FAQ Accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const faqCategories = document.querySelectorAll('.faq-category');
+
+            // FAQ accordion toggle
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon');
+                    
+                    if (isExpanded) {
+                        answer.style.maxHeight = null;
+                        icon.textContent = '+';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.textContent = '−';
+                    }
+                });
+            });
+
+            // Category filtering
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide categories
+                    faqCategories.forEach(cat => {
+                        if (category === 'all' || cat.dataset.category === category) {
+                            cat.style.display = 'block';
+                        } else {
+                            cat.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

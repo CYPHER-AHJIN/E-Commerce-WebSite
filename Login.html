@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - FreshEat</title>
+    <meta name="description" content="Sign in to your FreshEat account to access your orders, favorites, and personalized recommendations.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link active" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Auth Hero Section -->
+        <section class="auth-hero" aria-labelledby="auth-hero-title">
+            <div class="container">
+                <div class="auth-hero-content" data-aos="fade-up">
+                    <h1 id="auth-hero-title" class="hero-title">
+                        Welcome Back!
+                    </h1>
+                    <p class="hero-description">
+                        Sign in to your account to continue your fresh journey
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auth Content -->
+        <section class="auth-content" aria-label="Sign in form">
+            <div class="container">
+                <div class="auth-layout">
+                    <!-- Auth Form -->
+                    <div class="auth-form-section" data-aos="fade-right">
+                        <div class="auth-form-card">
+                            <div class="auth-header">
+                                <h2 class="auth-title">Sign In to FreshEat</h2>
+                                <p class="auth-subtitle">Access your orders, favorites, and personalized recommendations</p>
+                            </div>
+
+                            <form class="auth-form" onsubmit="handleLoginSubmit(event)">
+                                <div class="form-group">
+                                    <label for="login-email" class="form-label">Email Address</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">📧</span>
+                                        <input type="email" id="login-email" name="email" required class="form-input" placeholder="Enter your email address">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="login-password" class="form-label">Password</label>
+                                    <div class="input-wrapper">
+                                        <span class="input-icon">🔒</span>
+                                        <input type="password" id="login-password" name="password" required class="form-input" placeholder="Enter your password">
+                                        <button type="button" class="password-toggle" aria-label="Toggle password visibility">
+                                            <span class="toggle-icon">👁️</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-options">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="remember" class="checkbox-input">
+                                        <span class="checkbox-custom"></span>
+                                        Remember me
+                                    </label>
+                                    <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+                                </div>
+                                
+                                <button type="submit" class="cta-button primary full-width">
+                                    <span class="button-icon">🔑</span>
+                                    Sign In
+                                </button>
+
+                                <div class="auth-divider">
+                                    <span>or continue with</span>
+                                </div>
+
+                                <div class="social-auth">
+                                    <button type="button" class="social-btn google-btn">
+                                        <span class="social-icon">🔍</span>
+                                        Continue with Google
+                                    </button>
+                                    <button type="button" class="social-btn facebook-btn">
+                                        <span class="social-icon">📘</span>
+                                        Continue with Facebook
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div class="auth-footer">
+                                <p>Don't have an account? <a href="signup.html" class="auth-link">Sign up here</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Auth Benefits -->
+                    <div class="auth-benefits-section" data-aos="fade-left">
+                        <div class="benefits-card">
+                            <h3 class="benefits-title">Why Sign In?</h3>
+                            <div class="benefits-list">
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">🚚</span>
+                                    <div class="benefit-content">
+                                        <h4>Fast Checkout</h4>
+                                        <p>Save your details for quicker ordering</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">💝</span>
+                                    <div class="benefit-content">
+                                        <h4>Order History</h4>
+                                        <p>Track your previous orders and reorder favorites</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">⭐</span>
+                                    <div class="benefit-content">
+                                        <h4>Personalized Recommendations</h4>
+                                        <p>Get product suggestions based on your preferences</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <span class="benefit-icon">🎁</span>
+                                    <div class="benefit-content">
+                                        <h4>Exclusive Offers</h4>
+                                        <p>Access member-only discounts and early sales</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="security-notice">
+                                <div class="security-icon">🛡️</div>
+                                <div class="security-content">
+                                    <h4>Your data is safe with us</h4>
+                                    <p>We use industry-standard encryption to protect your personal information</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Indicators -->
+        <section class="auth-trust" aria-label="Trust indicators">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-item" data-aos="fade-up">
+                        <span class="trust-icon">🔒</span>
+                        <h3>Secure Login</h3>
+                        <p>Bank-level security for your account</p>
+                    </div>
+                    <div class="trust-item" data-aos="fade-up" data-aos-delay="200">
+                        <span class="trust-icon">⚡</span>
+                        <h3>Instant Access</h3>
+                        <p>Get immediate access to your account</p>
+                    </div>
+                    <div class="trust-item" data-aos="fade-up" data-aos-delay="400">
+                        <span class="trust-icon">📞</span>
+                        <h3>24/7 Support</h3>
+                        <p>Help available whenever you need it</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        function handleLoginSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const email = formData.get('email');
+            const password = formData.get('password');
+            
+            // Simulate login process
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = `
+                <span class="loading-spinner-small"></span>
+                Signing in...
+            `;
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                // Simulate successful login
+                ToastManager.show('Welcome back to FreshEat!', 'success');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            }, 2000);
+        }
+
+        // Password toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordToggle = document.querySelector('.password-toggle');
+            const passwordInput = document.getElementById('login-password');
+            
+            if (passwordToggle && passwordInput) {
+                passwordToggle.addEventListener('click', function() {
+                    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordInput.setAttribute('type', type);
+                    this.querySelector('.toggle-icon').textContent = type === 'password' ? '👁️' : '🔒';
+                });
+            }
+
+            // Social login buttons
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    ToastManager.show('Social login feature would be implemented here', 'info');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

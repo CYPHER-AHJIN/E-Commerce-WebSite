@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshEat - Premium Organic Fruits & Vegetables | Mansoura University Project</title>
+    <meta name="description" content="FreshEat delivers farm-fresh organic fruits and vegetables directly to your doorstep. Experience the taste of nature with our carefully curated selection.">
+    <meta name="keywords" content="fresh fruits, organic vegetables, healthy food, delivery, Mansoura University">
+    <meta name="author" content="Nagaty Ayman">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="FreshEat - Premium Organic Fruits & Vegetables">
+    <meta property="og:description" content="Farm-fresh organic produce delivered to your doorstep. Taste the difference of nature's finest.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=630&fit=crop">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo with Meaning -->
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <!-- Main Navigation -->
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" aria-current="page">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="main-content">
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="hero-background"></div>
+            <div class="hero-container">
+                <div class="hero-content" data-aos="fade-up">
+                    <div class="hero-badge">
+                        <span class="badge-icon">🌱</span>
+                        Naturally Fresh, Always Delicious
+                    </div>
+                    
+                    <h1 id="hero-title" class="hero-title">
+                        <span class="title-line">Experience Nature's</span>
+                        <span class="title-line highlight">Finest Harvest</span>
+                        <span class="title-line">Delivered with Care</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        At FreshEat, we believe everyone deserves access to fresh, organic produce. 
+                        Our mission is to bring the farm directly to your table, ensuring every bite 
+                        is packed with nutrition and flavor.
+                    </p>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Organic</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Fresh Delivery</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Happy Families</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                        <a href="products.html" class="cta-button primary" aria-label="Explore our fresh products collection">
+                            <span class="button-icon">🛒</span>
+                            Explore Fresh Products
+                        </a>
+                        <a href="#values" class="cta-button secondary" aria-label="Learn more about our values">
+                            <span class="button-icon">❤️</span>
+                            Our Promise to You
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="floating-elements">
+                        <div class="floating-item apple" data-aos="float" data-aos-delay="700">
+                            <span>🍎</span>
+                        </div>
+                        <div class="floating-item banana" data-aos="float" data-aos-delay="900">
+                            <span>🍌</span>
+                        </div>
+                        <div class="floating-item strawberry" data-aos="float" data-aos-delay="1100">
+                            <span>🍓</span>
+                        </div>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&h=400&fit=crop" 
+                         alt="Beautiful assortment of fresh organic fruits and vegetables"
+                         class="hero-image"
+                         loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section id="values" class="values-section" aria-labelledby="values-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="values-title" class="section-title">Why Families Trust FreshEat</h2>
+                    <p class="section-subtitle">Our commitment to quality and care sets us apart</p>
+                </div>
+
+                <div class="values-grid">
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-icon">🌿</div>
+                        <h3 class="value-title">100% Organic</h3>
+                        <p class="value-description">
+                            Every product is carefully selected from trusted local farms that share 
+                            our commitment to sustainable, chemical-free agriculture.
+                        </p>
+                    </div>
+
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-icon">🚚</div>
+                        <h3 class="value-title">Farm to Table</h3>
+                        <p class="value-description">
+                            We deliver within 24 hours of harvest, ensuring you receive the freshest 
+                            produce while supporting local farming communities.
+                        </p>
+                    </div>
+
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="value-icon">💝</div>
+                        <h3 class="value-title">Family Focused</h3>
+                        <p class="value-description">
+                            We understand the importance of healthy eating for families. That's why 
+                            we carefully curate our selection with your loved ones in mind.
+                        </p>
+                    </div>
+
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="value-icon">💰</div>
+                        <h3 class="value-title">Fair Prices</h3>
+                        <p class="value-description">
+                            By working directly with farmers, we eliminate middlemen and pass the 
+                            savings directly to you without compromising on quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Preview -->
+        <section class="featured-section" aria-labelledby="featured-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="featured-title" class="section-title">Today's Fresh Picks</h2>
+                    <p class="section-subtitle">Hand-selected for exceptional quality and flavor</p>
+                </div>
+
+                <div class="featured-grid" id="featured-products">
+                    <!-- Featured products will be loaded here by JavaScript -->
+                </div>
+
+                <div class="section-footer" data-aos="fade-up">
+                    <a href="products.html" class="view-all-button">
+                        <span>View Complete Collection</span>
+                        <span class="arrow-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Impact -->
+        <section class="impact-section" aria-labelledby="impact-title">
+            <div class="container">
+                <div class="impact-content">
+                    <div class="impact-text" data-aos="fade-right">
+                        <h2 id="impact-title" class="impact-title">More Than Just Food</h2>
+                        <p class="impact-description">
+                            Every purchase you make supports local farming families and promotes 
+                            sustainable agriculture in our community. Together, we're building 
+                            a healthier future for generations to come.
+                        </p>
+                        <div class="impact-stats">
+                            <div class="impact-stat">
+                                <span class="impact-number">50+</span>
+                                <span class="impact-label">Local Farms Supported</span>
+                            </div>
+                            <div class="impact-stat">
+                                <span class="impact-number">10k+</span>
+                                <span class="impact-label">Healthy Meals Delivered</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="impact-visual" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop" 
+                             alt="Happy family enjoying fresh vegetables together"
+                             class="impact-image"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>

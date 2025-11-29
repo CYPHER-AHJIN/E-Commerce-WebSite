@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Products - Premium Organic Fruits & Vegetables | FreshEat</title>
+    <meta name="description" content="Discover our carefully curated selection of fresh, organic fruits and vegetables. Each product is sourced from trusted local farms and delivered with care.">
+    <meta name="keywords" content="organic fruits, fresh vegetables, healthy food, local farms, sustainable agriculture">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fresh Products - Premium Organic Selection | FreshEat">
+    <meta property="og:description" content="Explore our farm-fresh organic produce. Quality you can taste, from our family to yours.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1200&h=630&fit=crop">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link active" aria-current="page">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Products Hero Section -->
+        <section class="products-hero" aria-labelledby="products-hero-title">
+            <div class="hero-background"></div>
+            <div class="container">
+                <div class="products-hero-content">
+                    <div class="hero-badge" data-aos="fade-up">
+                        <span class="badge-icon">🌿</span>
+                        Farm Fresh & Certified Organic
+                    </div>
+                    
+                    <h1 id="products-hero-title" class="hero-title" data-aos="fade-up">
+                        <span class="title-line">Discover Nature's</span>
+                        <span class="title-line highlight">Finest Harvest</span>
+                    </h1>
+                    
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Every product in our collection is carefully selected from trusted local farms that share 
+                        our commitment to sustainable agriculture and family wellness.
+                    </p>
+
+                    <div class="products-stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-card">
+                            <span class="stat-icon">🌱</span>
+                            <div class="stat-content">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Organic Certified</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon">🚚</span>
+                            <div class="stat-content">
+                                <span class="stat-number">24h</span>
+                                <span class="stat-label">Fresh Delivery</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-icon">💝</span>
+                            <div class="stat-content">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Local Farms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Filter & Search -->
+        <section class="products-controls" aria-label="Products filtering and search">
+            <div class="container">
+                <div class="controls-grid">
+                    <div class="search-box" data-aos="fade-right">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" 
+                                   id="products-search" 
+                                   placeholder="Search for fresh products..." 
+                                   aria-label="Search products">
+                            <button class="search-clear" aria-label="Clear search">×</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-controls" data-aos="fade-left">
+                        <div class="filter-group">
+                            <label for="category-filter" class="filter-label">Category:</label>
+                            <select id="category-filter" class="filter-select">
+                                <option value="all">All Products</option>
+                                <option value="fruits">Fresh Fruits</option>
+                                <option value="vegetables">Organic Vegetables</option>
+                                <option value="seasonal">Seasonal Specials</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="sort-filter" class="filter-label">Sort by:</label>
+                            <select id="sort-filter" class="filter-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Customer Rating</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid Section -->
+        <section class="products-grid-section" aria-labelledby="products-grid-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="products-grid-title" class="section-title" data-aos="fade-up">
+                        Our Fresh Selection
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Handpicked for quality, flavor, and nutritional value
+                    </p>
+                </div>
+
+                <div id="products-grid" class="products-grid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+
+                <!-- Loading State -->
+                <div id="products-loading" class="products-loading-state">
+                    <div class="loading-spinner-large"></div>
+                    <p>Loading fresh products...</p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="products-empty" class="products-empty-state" style="display: none;">
+                    <div class="empty-state-icon">🌱</div>
+                    <h3>No products found</h3>
+                    <p>Try adjusting your search or filters to see more products.</p>
+                    <button class="cta-button secondary" onclick="resetFilters()">
+                        Reset Filters
+                    </button>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section" data-aos="fade-up">
+                    <button id="load-more-btn" class="cta-button secondary">
+                        <span class="button-icon">📦</span>
+                        Load More Products
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Promise Section -->
+        <section class="quality-promise" aria-labelledby="quality-promise-title">
+            <div class="container">
+                <div class="promise-grid">
+                    <div class="promise-content" data-aos="fade-right">
+                        <h2 id="quality-promise-title" class="promise-title">
+                            Our Quality Promise to You
+                        </h2>
+                        <p class="promise-description">
+                            We believe that every family deserves access to fresh, nutritious food. 
+                            That's why we work directly with local farmers who share our values and 
+                            commitment to sustainable agriculture.
+                        </p>
+                        
+                        <div class="promise-features">
+                            <div class="promise-feature">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">Direct from farm to your table</span>
+                            </div>
+                            <div class="promise-feature">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">No artificial pesticides or chemicals</span>
+                            </div>
+                            <div class="promise-feature">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">Rigorous quality checks</span>
+                            </div>
+                            <div class="promise-feature">
+                                <span class="feature-icon">✅</span>
+                                <span class="feature-text">Supporting local communities</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="promise-visual" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=400&fit=crop" 
+                             alt="Happy farmer holding fresh vegetables"
+                             class="promise-image"
+                             loading="lazy">
+                        <div class="promise-badge">
+                            <span class="badge-icon">💝</span>
+                            Supporting Local Farming Families
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" aria-labelledby="newsletter-title">
+            <div class="container">
+                <div class="newsletter-content" data-aos="zoom-in">
+                    <div class="newsletter-icon">📧</div>
+                    <h2 id="newsletter-title" class="newsletter-title">
+                        Stay Fresh with Our Updates
+                    </h2>
+                    <p class="newsletter-description">
+                        Get seasonal recipes, farming stories, and exclusive offers delivered to your inbox.
+                    </p>
+                    
+                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                        <div class="form-group">
+                            <input type="email" 
+                                   placeholder="Enter your email address" 
+                                   aria-label="Email address"
+                                   required
+                                   class="newsletter-input">
+                            <button type="submit" class="cta-button primary">
+                                <span class="button-icon">✨</span>
+                                Subscribe
+                            </button>
+                        </div>
+                        <p class="newsletter-note">
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Newsletter handler
+        function handleNewsletterSubmit(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input[type="email"]').value;
+            // Simulate newsletter signup
+            setTimeout(() => {
+                alert('Thank you for subscribing to FreshEat updates! We\'ll send you seasonal recipes and farming stories.');
+                event.target.reset();
+            }, 1000);
+        }
+
+        // Filter reset function
+        function resetFilters() {
+            document.getElementById('products-search').value = '';
+            document.getElementById('category-filter').value = 'all';
+            document.getElementById('sort-filter').value = 'featured';
+            // Trigger products reload
+            if (window.ProductManager) {
+                ProductManager.renderProductsGrid();
+            }
+        }
+    </script>
+</body>
+</html>

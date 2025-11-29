@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - FreshEat</title>
+    <meta name="description" content="Learn about FreshEat's mission, values, and commitment to bringing fresh organic produce to families.">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
+</head>
+<body>
+    <!-- Announcement Banner -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-icon">🎓</span>
+            <span>This educational website was passionately created by <strong>Nagaty Ayman</strong> as a computer science project for <strong>Mansoura University</strong></span>
+            <span class="banner-emoji">✨</span>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">🍏</span>
+                <span class="logo-text">
+                    <span class="logo-primary">Fresh</span>
+                    <span class="logo-secondary">Eat</span>
+                </span>
+            </a>
+
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+
+            <nav class="main-navigation" role="navigation">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <span class="nav-icon">🏠</span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="products.html" class="nav-link">
+                            <span class="nav-icon">🛒</span>
+                            Our Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span class="nav-icon">🛍️</span>
+                            My Cart
+                            <span class="cart-count-badge" id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link active" aria-current="page">
+                            <span class="nav-icon">❤️</span>
+                            Our Story
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="dark-toggle" aria-label="Toggle dark mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                
+                <div class="user-actions">
+                    <a href="login.html" class="auth-link" aria-label="Login to your account">
+                        <span class="auth-icon">👤</span>
+                        <span class="auth-text">Sign In</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- About Hero Section -->
+        <section class="about-hero" aria-labelledby="about-hero-title">
+            <div class="container">
+                <div class="about-hero-content" data-aos="fade-up">
+                    <h1 id="about-hero-title" class="hero-title">
+                        Our Story
+                    </h1>
+                    <p class="hero-description">
+                        From farm to family - our journey to bring fresh, organic produce to your table
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section" aria-labelledby="mission-title">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content" data-aos="fade-right">
+                        <h2 id="mission-title" class="section-title">
+                            Our Mission
+                        </h2>
+                        <p class="mission-description">
+                            FreshEat was born from a simple belief: every family deserves access to 
+                            fresh, nutritious, and affordable organic produce. We bridge the gap 
+                            between local farmers and urban families, creating a sustainable food 
+                            ecosystem that benefits everyone.
+                        </p>
+                        
+                        <div class="mission-values">
+                            <div class="value-item">
+                                <span class="value-icon">🌱</span>
+                                <div class="value-content">
+                                    <h4>Sustainability First</h4>
+                                    <p>We partner with farms that practice eco-friendly agriculture</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">💝</span>
+                                <div class="value-content">
+                                    <h4>Family Focused</h4>
+                                    <p>Every product is selected with families and health in mind</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-icon">🤝</span>
+                                <div class="value-content">
+                                    <h4>Community Driven</h4>
+                                    <p>We support local economies and build lasting relationships</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mission-visual" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=400&fit=crop" 
+                             alt="Fresh organic vegetables from our partner farms"
+                             class="mission-image"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section" aria-labelledby="timeline-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="timeline-title" class="section-title" data-aos="fade-up">
+                        Our Journey
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        From humble beginnings to serving thousands of families
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-marker">2023</div>
+                        <div class="timeline-content">
+                            <h3>The Beginning</h3>
+                            <p>Started with 5 local farms and a vision to make organic produce accessible to everyone</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-marker">2024</div>
+                        <div class="timeline-content">
+                            <h3>Growing Together</h3>
+                            <p>Expanded to 50+ farm partners and served our first 1,000 families</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="timeline-marker">2025</div>
+                        <div class="timeline-content">
+                            <h3>Looking Forward</h3>
+                            <p>Continuing to innovate while staying true to our core values of quality and community</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section" aria-labelledby="team-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="team-title" class="section-title" data-aos="fade-up">
+                        Meet Our Team
+                    </h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Passionate individuals dedicated to fresh, healthy living
+                    </p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="member-avatar">👨‍💼</div>
+                        <h3 class="member-name">Nagaty Ayman</h3>
+                        <p class="member-role">Founder & CEO</p>
+                        <p class="member-bio">Computer Science student at Mansoura University with a passion for sustainable agriculture</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-avatar">👩‍🌾</div>
+                        <h3 class="member-name">Farm Partners</h3>
+                        <p class="member-role">Our Growing Family</p>
+                        <p class="member-bio">50+ dedicated farming families committed to organic, sustainable practices</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-avatar">🚚</div>
+                        <h3 class="member-name">Delivery Team</h3>
+                        <p class="member-role">Freshness Guardians</p>
+                        <p class="member-bio">Ensuring your produce arrives fresh and on time, every time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <span class="logo-icon">🍏</span>
+                            <span class="logo-text">
+                                <span class="logo-primary">Fresh</span>
+                                <span class="logo-secondary">Eat</span>
+                            </span>
+                        </a>
+                        <p class="footer-description">
+                            Bringing nature's finest harvest to your table with care, 
+                            quality, and commitment to our community.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Follow us on Facebook">
+                                <span>📘</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Instagram">
+                                <span>📷</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Follow us on Twitter">
+                                <span>🐦</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="products.html" class="footer-link">Our Products</a></li>
+                        <li><a href="about.html" class="footer-link">Our Story</a></li>
+                        <li><a href="cart.html" class="footer-link">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                        <li><a href="faq.html" class="footer-link">FAQ</a></li>
+                        <li><a href="shipping.html" class="footer-link">Shipping Info</a></li>
+                        <li><a href="returns.html" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span class="contact-text">+20 155 217 4878</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span class="contact-text">echahjin@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">🏫</span>
+                            <span class="contact-text">Mansoura University<br>Computer Science Project</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; 2025 FreshEat. Crafted with ❤️ by 
+                        <strong>Nagaty Ayman</strong> for educational purposes at Mansoura University.
+                    </p>
+                    <div class="footer-meta">
+                        <a href="privacy.html" class="meta-link">Privacy Policy</a>
+                        <a href="terms.html" class="meta-link">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
