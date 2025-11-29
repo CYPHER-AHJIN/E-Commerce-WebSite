@@ -96,24 +96,24 @@ cd FreshEat-Ecommerce
 📱 Responsive Design
 The website is fully responsive and optimized for:
 
-  Desktop (1200px+)
+  - **Desktop** (1200px+)
 
-  Tablet (768px - 1199px)
+  - **Tablet** (768px - 1199px)
 
-  Mobile (320px - 767px)
+ - **Mobile** (320px - 767px)
 
 🎓 Educational Purpose
 This project was developed by Nagaty Ayman as a computer science project for Mansoura University. It demonstrates modern web development practices including:
 
-  Clean code architecture
+  - **Clean* code architecture
 
-  Responsive design principles
+  - **Responsive* design principles
 
-  JavaScript ES6+ features
+  - **JavaScript* ES6+ features
 
-  CSS custom properties
+  - **CSS* custom properties
 
-  Accessibility best practices
+  - **Accessibility* best practices
 
 🤝 Contributing
 This is an educational project. Feel free to fork and modify for learning purposes.
@@ -122,10 +122,10 @@ This is an educational project. Feel free to fork and modify for learning purpos
 This project is open source and available under the MIT License.
 
 📞 Contact
-  Developer: Nagaty Ayman
+  - **Developer**: Nagaty Ayman
 
-  Email: echahjin@gmail.com
+  - **Email**: echahjin@gmail.com
 
-  University: Mansoura University
+  - **University**: Mansoura University
 
-  Phone: +20 155 217 4878
+  - **Phone**: +20 155 217 4878
