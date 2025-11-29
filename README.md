@@ -116,7 +116,7 @@ This project was developed by Nagaty Ayman as a computer science project for Man
   - **Accessibility* best practices
 
 🤝 Contributing
-This is an educational project. Feel free to fork and modify for learning purposes.
+This is an educational project For only Frontend Develobment no Backend implemented (Yet). Feel free to fork and modify for learning purposes.
 
 📄 License
 This project is open source and available under the MIT License.
