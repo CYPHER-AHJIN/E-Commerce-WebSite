@@ -1,9 +1,5 @@
-// script.js - FreshEat Professional & Human-Centered JavaScript
-
 /**
- * FreshEat E-commerce Platform
- * Developed with ❤️ by Nagaty Ayman for Mansoura University
- * A demonstration of modern web development practices
+  Developed with ❤️ by Nagaty Ayman for Mansoura University
  */
 
 // ===== CONFIGURATION & CONSTANTS =====
